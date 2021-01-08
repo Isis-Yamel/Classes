@@ -1,0 +1,68 @@
+/*box model: Modelo de caja. Regla que define las dimensiones de los elementos en la pantalla
+
+Se puede modificar con la propiedad box-sizing
+
+- content-box : solo el contenido
+- border - box: incluye todos los valores*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: red;
+}
+
+/* CSS Cascade ORDER Matters */
+
+/* Ejemplo: como el h1 verde es el ultimo , es el que se aplica , cascada se aplica de arriba a abajo */
+
+h1 {
+  color: green;
+}
+
+#encabezado {
+  color: #be2275;
+  font-family: 'Libre Baskerville', serif;
+}
+
+/* Specificity: Conjunto de reglas que calculan cuanto pesa el selector. Gana el más grande */
+
+/* Name collisions :
+Dos Wilson, aplica el ultimo Wilson. Sobre escribe los estilos. Lo ignora, y solo aplica ultimo
+
+Metodologias (Maneras) : Para nombrar las clases en CSS*/
+
+/* BEM : Bloque Elemento Modificador
+
+Propone: Orden para el CSS
+Reusabilidad: Usar una cosa mas de una vez*/
+
+.section__content--style {
+  background-color: #979662;
+  color: #bfbbca;
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+.section__content--highlight {
+  font-weight: bold;
+}
+
+/* Propiedades importantes a tener en cuenta:
+  display: define como va a comportarse un elemento , es decir, que ancho va a ocupar y si se respetan las margenes
+
+  display: block --> toma todo el ancho y respeta todas las margenes
+  display: inline --> etiquetas en linea, respeta margin y padding lateral
+  display: inline-block --> es igual al inline , pero respeta todas las margenes y padding
+
+  position: cambia la posicion del elemento en la pantalla
+
+  position: absolute --> Quita el elemento de su flujo y lo pone relativo a la ventana del navegador o al elemento mas cercano posicionado
+  position: relative --> Mueve el elemento referente a su posicion original
+  position: sticky --> mueve el elemento cuando hacemos scroll hasta cierto punto
+  position: fixed --> pone el elemento en pantalla referente a la ventana , y no lo quita, siempre esta en pantalla
+*/
